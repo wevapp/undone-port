@@ -3,7 +3,6 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
     screens: {
@@ -14,8 +13,42 @@ export default {
       xl: '1280px',
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ]
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      "light", // eto
+      "dark", // eto
+      "cupcake", // eto
+      "bumblebee", // eto
+      "emerald",
+      "corporate",
+      "synthwave", // eto
+      "retro", // eto
+      "cyberpunk",
+      "valentine",
+      "halloween", // eto
+      "garden",
+      "forest", // eto
+      "aqua",
+      "lofi",  // eto
+      "pastel",
+      "fantasy", // eto
+      "wireframe", // eto
+      "black", // eto
+      "luxury", // eto
+      "dracula", // eto
+      "cmyk", // eto
+      "autumn", // eto
+      "business",
+      "acid",
+      "lemonade",
+      "night", // eto
+      "coffee", // eto
+      "winter",
+      "dim", // eto
+      "nord", // eto
+      "sunset", // eto
+    ],
+  },
 }
 

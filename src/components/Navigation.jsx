@@ -37,7 +37,7 @@ const Navigation = () => {
         style={{ boxShadow: "0 4px 6px rgba(255, 255, 255, 0.1)" }}
       >
         <Link to="/">
-          <img src="public/Logo/mrwhite.png" width={300} alt="logo" />
+          <img src="/Logo/mrwhite.png" width={300} alt="logo" />
         </Link>
 
         {/* Button close/open */}
@@ -58,7 +58,28 @@ const Navigation = () => {
                   <Link to="/">Home</Link>
                 </li>
                 <li className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
-                  <Link to="/about">About</Link>
+                  <div className="dropdown dropdown-hover">
+                    <div tabIndex={0} role="button">
+                      About
+                    </div>
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content z-[1] menu p-2 shadow bg-slate-100 w-52"
+                    >
+                      <li>
+                        <Link to="/about">About Me</Link>
+                      </li>
+                      <li>
+                        <Link to="/skills">Skills/Stacks</Link>
+                      </li>
+                      <li>
+                        <Link to="/educational">Educational</Link>
+                      </li>
+                      <li>
+                        <Link to="/workingexp">Working Exp.</Link>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
                   <Link to="/contact">Contact</Link>
@@ -86,7 +107,28 @@ const Navigation = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
-            <Link to="/about">About</Link>
+            <div className="dropdown dropdown-hover">
+              <div tabIndex={0} role="button">
+                About
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-slate-100 w-52 rounded-md"
+              >
+                <li>
+                  <Link to="/about">About Me</Link>
+                </li>
+                <li>
+                  <Link to="/skills">Skills/Stacks</Link>
+                </li>
+                <li>
+                  <Link to="/educational">Educational</Link>
+                </li>
+                <li>
+                  <Link to="/workingexp">Working Exp.</Link>
+                </li>
+              </ul>
+            </div>
           </li>
           <li className="px-6 py-2  hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
             <Link to="/contact">Contact</Link>
@@ -96,10 +138,12 @@ const Navigation = () => {
           </li>
         </ul>
         <ul className="flex px-6 xs:hidden sm:hidden md:hidden lg:flex">
-          <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+          <li className="flex justify-center items-center px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+            <i className="fa-solid fa-user mr-2"></i>
             <Link to="/login">Login</Link>
           </li>
-          <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+          <li className="flex justify-center items-center px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+            <i className="fa-sharp fa-solid fa-newspaper mr-2"></i>
             <Link to="/register">Register</Link>
           </li>
         </ul>
