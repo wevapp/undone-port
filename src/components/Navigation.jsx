@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 const Navigation = () => {
-  const [isClicked, setIsClicked] = useState(true);
   return (
-    <div>
+    <div
+      className="sticky top-0 z-10"
+      style={{
+        background: "linear-gradient(to right, #818fb4, #435585, #363062)",
+      }}
+    >
       <div>
         <svg
           data-name="Layer 1"
@@ -33,72 +37,74 @@ const Navigation = () => {
       </div>
 
       <div
-        className="mx-4 text-white flex justify-between px-8 py-4 items-center font-semibold relative shadow"
-        style={{ boxShadow: "0 4px 6px rgba(255, 255, 255, 0.1)" }}
+        className=" text-white flex justify-between px-12 py-4 items-center font-semibold relative shadow"
+        style={{
+          boxShadow: "0 4px 6px rgba(255, 255, 255, 0.1)",
+        }}
       >
+        {/* Logo */}
         <Link to="/">
           <img src="/Logo/mrwhite.png" width={300} alt="logo" />
         </Link>
 
         {/* Button close/open */}
         <div className="sm:block md:block lg:hidden xl:hidden">
-          {isClicked ? (
-            <i
-              className="fa-sharp fa-solid fa-bars fa-2xl text-white"
-              onClick={() => setIsClicked(false)}
-            ></i>
-          ) : (
-            <div>
-              <i
-                className="fa-solid fa-xmark fa-2xl mr-8 text-red-500"
-                onClick={() => setIsClicked(true)}
-              ></i>
-              <ul className="grid gap-4 px-2 absolute top-20 right-8 text-center">
-                <li className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+          <div className="drawer drawer-end z-10">
+            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+              {/* Page content here */}
+              <label htmlFor="my-drawer-4" className="drawer-button">
+                <i className="fa-sharp fa-solid fa-bars fa-2xl text-white"></i>
+              </label>
+            </div>
+            <div className="drawer-side">
+              <label
+                htmlFor="my-drawer-4"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
+              <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content grid text-lg">
+                {/* Sidebar content here */}
+                <li>
+                  {/* <i className="fa-sharp fa-house fa-lg"></i> */}
                   <Link to="/">Home</Link>
                 </li>
-                <li className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
-                  <div className="dropdown dropdown-hover">
-                    <div tabIndex={0} role="button">
-                      About
-                    </div>
-                    <ul
-                      tabIndex={0}
-                      className="dropdown-content z-[1] menu p-2 shadow bg-slate-100 w-52"
-                    >
-                      <li>
-                        <Link to="/about">About Me</Link>
-                      </li>
-                      <li>
-                        <Link to="/skills">Skills/Stacks</Link>
-                      </li>
-                      <li>
-                        <Link to="/educational">Educational</Link>
-                      </li>
-                      <li>
-                        <Link to="/workingexp">Working Exp.</Link>
-                      </li>
-                    </ul>
+                <div className="collapse">
+                  <input type="checkbox" />
+                  <div className="collapse-title">
+                    {/* <i className="fa-sharp fa-circle-info fa-lg"></i> About */}
+                    About
                   </div>
-                </li>
-                <li className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+                  <div className="collapse-content text-sm">
+                    <li className="border-b-2">
+                      <Link to="/about">About Me</Link>
+                    </li>
+                    <li className="border-b-2">
+                      <Link to="/skills">Skills/Stacks</Link>
+                    </li>
+                    <li className="border-b-2">
+                      <Link to="/educational">Educational</Link>
+                    </li>
+                    <li className="border-b-2">
+                      <Link to="/workingexp">Working Exp.</Link>
+                    </li>
+                  </div>
+                </div>
+                <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+                <li>
                   <Link to="/projects">Projects</Link>
                 </li>
-                <li className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+                <li>
                   <Link to="/login">Login</Link>
                 </li>
-                <li
-                  className="hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out"
-                  title="Register for an account"
-                >
+                <li>
                   <Link to="/register">Register</Link>
                 </li>
               </ul>
             </div>
-          )}
+          </div>
         </div>
 
         {/* Navigation list */}
@@ -138,11 +144,11 @@ const Navigation = () => {
           </li>
         </ul>
         <ul className="flex px-6 xs:hidden sm:hidden md:hidden lg:flex">
-          <li className="flex justify-center items-center px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+          <li className="flex justify-center items-center px-6 py-1 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
             <i className="fa-solid fa-user mr-2"></i>
             <Link to="/login">Login</Link>
           </li>
-          <li className="flex justify-center items-center px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+          <li className="border-2 flex justify-center items-center px-6 py-1 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
             <i className="fa-sharp fa-solid fa-newspaper mr-2"></i>
             <Link to="/register">Register</Link>
           </li>
