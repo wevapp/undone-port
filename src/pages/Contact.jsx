@@ -45,7 +45,7 @@ const Contact = () => {
               type="text"
               value={userMessage.fullname}
               placeholder="Enter your name"
-              className="input input-md input-accent w-full max-w-xs rounded-none"
+              className="input input-md input-accent w-full max-w-xl rounded-none"
               onChange={(e) =>
                 setUserMessage({ ...userMessage, fullname: e.target.value })
               }
@@ -57,7 +57,7 @@ const Contact = () => {
               type="text"
               value={userMessage.email}
               placeholder="example@sample.com"
-              className="input input-md input-accent w-full max-w-xs rounded-none"
+              className="input input-md input-accent w-full max-w-xl rounded-none"
               onChange={(e) =>
                 setUserMessage({ ...userMessage, email: e.target.value })
               }
@@ -70,7 +70,7 @@ const Contact = () => {
               onChange={(e) =>
                 setUserMessage({ ...userMessage, message: e.target.value })
               }
-              className="textarea textarea-accent rounded-none w-full max-w-xs"
+              className="textarea textarea-accent rounded-none w-full max-w-xl"
               placeholder="Message"
             ></textarea>
           </div>
@@ -87,7 +87,7 @@ const Contact = () => {
       </div>
       {/* divide */}
       <div className="px-3 xs:min-w-full sm:min-w-full md:min-w-full lg:min-w-[60%] xl:min-w-[60%]">
-        <div className="hero min-h-full">
+        <div className="hero min-h-full xs:mt-3 sm:mt-3 md:mt-3 lg:mt-0 xl:mt-0">
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">

@@ -7,6 +7,7 @@ import Rootlayout from "./layout/Rootlayout";
 // import pages
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 // import about content components
 import AboutMe from "./components/about-components/AboutMe";
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/educational" element={<EducationalBackground />} />
         <Route path="/workingexp" element={<WorkingExperience />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
       </Route>
     </Routes>
   );

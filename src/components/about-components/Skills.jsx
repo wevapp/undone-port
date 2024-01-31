@@ -62,8 +62,8 @@ const Skills = () => {
       <p className="mt-8 pl-20 text-white text-2xl font-bold">Hardware</p>
       <div className="grid gap-y-4 p-8 text-white xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
         {cards.hardware.map((card) => (
-          <div className="w-52 card glass m-auto hover:bg-slate-100 hover:text-black transition duration-500 ease-in-out cursor-not-allowed xs:w-full sm:w-52 md:w-52 lg:w-52 xl:w-52">
-            <figure className="p-2 hover:bg-white transition duration-500 ease-in-out">
+          <div className="relative w-52 card glass m-auto hover:bg-slate-100 hover:text-black transition duration-500 ease-in-out cursor-not-allowed xs:w-full sm:w-52 md:w-52 lg:w-52 xl:w-52">
+            <figure className="relative p-2 hover:bg-white transition duration-500 ease-in-out">
               <img
                 src={card.img}
                 alt={card.title}
@@ -73,6 +73,8 @@ const Skills = () => {
             <div className="p-3">
               <h2>{card.title}</h2>
             </div>
+            {/* Pseudo-elements for the background transition */}
+            <div className="absolute top-0 left-0 w-0 h-full bg-white transition duration-500 ease-in-out opacity-0 group-hover:opacity-100"></div>
           </div>
         ))}
       </div>
