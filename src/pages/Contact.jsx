@@ -44,7 +44,7 @@ const Contact = () => {
             <input
               type="text"
               value={userMessage.fullname}
-              placeholder="Enter your name"
+              placeholder="John Doe"
               className="input input-md input-accent w-full max-w-xl rounded-none"
               onChange={(e) =>
                 setUserMessage({ ...userMessage, fullname: e.target.value })
@@ -71,7 +71,7 @@ const Contact = () => {
                 setUserMessage({ ...userMessage, message: e.target.value })
               }
               className="textarea textarea-accent rounded-none w-full max-w-xl"
-              placeholder="Message"
+              placeholder="I'm very satisfied to your service, more power!"
             ></textarea>
           </div>
           <div className="flex flex-col justify-between items-start">
@@ -79,7 +79,7 @@ const Contact = () => {
               onClick={handleSendMessage}
               className="m-auto font-semibold bg-green-600 px-10 py-2 rounded-none text-white hover:bg-green-500 w-48"
             >
-              Send
+              <i className="fa-regular fa-paper-plane"></i> Send
             </button>
           </div>
           <div className="border flex justify-center items-center"></div>

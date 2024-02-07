@@ -3,11 +3,13 @@ import { Route, Routes } from "react-router-dom";
 
 // import rootlayout
 import Rootlayout from "./layout/Rootlayout";
+import Test from "./pages/Test";
 
 // import pages
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 // import about content components
 import AboutMe from "./components/about-components/AboutMe";
@@ -26,6 +28,9 @@ const App = () => {
         <Route path="/workingexp" element={<WorkingExperience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Signup />} />
+
+        <Route path="/test" element={<Test />} />
       </Route>
     </Routes>
   );

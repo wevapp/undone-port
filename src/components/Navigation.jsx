@@ -142,6 +142,9 @@ const Navigation = () => {
           <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
             <Link to="/projects">Projects</Link>
           </li>
+          <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+            <Link to="/test">Test-Area</Link>
+          </li>
         </ul>
         <ul className="flex px-6 xs:hidden sm:hidden md:hidden lg:flex">
           <li className="flex justify-center items-center px-6 py-1 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
