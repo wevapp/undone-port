@@ -9,6 +9,7 @@ import Test from "./pages/Test";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Project from "./pages/Project";
 import Signup from "./pages/Signup";
 
 // import about content components
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/educational" element={<EducationalBackground />} />
         <Route path="/workingexp" element={<WorkingExperience />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Project />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
 
