@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 const Rootlayout = () => {
   return (
     <div
-      className="container m-auto shadow-md bg-gradient-to-r"
+      className="container m-auto shadow-md bg-gradient-to-r overflow-hidden"
       style={{
         background: "linear-gradient(to right, #818fb4, #435585, #363062)",
       }}

@@ -44,7 +44,12 @@ const Navigation = () => {
       >
         {/* Logo */}
         <Link to="/">
-          <img src="/Logo/mrwhite.png" width={300} alt="logo" />
+          <img
+            src="/Logo/mrwhite.png"
+            width={300}
+            alt="logo"
+            className="xs:w-44 sm:w-80 md:w-80 lg:w-80 xl:w-80"
+          />
         </Link>
 
         {/* Button close/open */}
@@ -142,9 +147,9 @@ const Navigation = () => {
           <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
             <Link to="/projects">Projects</Link>
           </li>
-          <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
+          {/* <li className="px-6 py-2 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">
             <Link to="/test">Test-Area</Link>
-          </li>
+          </li> */}
         </ul>
         <ul className="flex px-6 xs:hidden sm:hidden md:hidden lg:flex">
           <li className="flex justify-center items-center px-6 py-1 hover:bg-slate-200 hover:text-black transition duration-700 ease-in-out">

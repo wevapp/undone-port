@@ -8,8 +8,11 @@ const Signup = () => {
   });
 
   const [confirmPassword, setConfirmPass] = useState("");
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
+    useState(false);
 
-  const handleLogin = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setNewUser({
       fullname: "",
@@ -51,11 +54,9 @@ const Signup = () => {
           </svg>
 
           <div className="p-5 text-center">
-            {/* <div className="min-h-[130px] min-w-[130px] bg-white rounded-full absolute left-2 -z-10 opacity-20 xs:top-0 sm:top-16 md:top-16 lg:top-18 xl:top-18"></div> */}
             <span className="font-semibold z-10 xs:text-sm sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl text-slate-400 flex justify-start pl-8">
               Create new one!
             </span>
-            {/* <div className="min-h-[300px] min-w-[300px] bg-white rounded-full absolute -bottom-20 -right-20 -z-10 opacity-10"></div> */}
           </div>
 
           <svg
@@ -139,10 +140,10 @@ const Signup = () => {
           </div>
 
           {/* Password field */}
-          <div className="flex flex-col justify-between items-start px-8 py-1">
+          <div className="flex flex-col justify-between items-start px-8 py-1 relative">
             <label className="text-white">Password</label>
             <input
-              type="password"
+              type={isPasswordVisible ? "text" : "password"}
               value={newUser.password}
               placeholder="******"
               onChange={(e) =>
@@ -156,13 +157,19 @@ const Signup = () => {
                 borderImageSlice: "1",
               }}
             />
+            <i
+              className={`fa-light ${
+                isPasswordVisible ? "fa-eye-slash" : "fa-eye"
+              } absolute top-[55%] right-10`}
+              onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+            ></i>
           </div>
 
           {/* Confirm Password field */}
-          <div className="flex flex-col justify-between items-start px-8 py-1">
+          <div className="flex flex-col justify-between items-start px-8 py-1 relative">
             <label className="text-white">Confirm Password</label>
             <input
-              type="password"
+              type={isConfirmPasswordVisible ? "text" : "password"}
               value={confirmPassword}
               placeholder="******"
               onChange={(e) => setConfirmPass(e.target.value)}
@@ -174,12 +181,20 @@ const Signup = () => {
                 borderImageSlice: "1",
               }}
             />
+            <i
+              className={`fa-light ${
+                isConfirmPasswordVisible ? "fa-eye-slash" : "fa-eye"
+              } absolute top-[55%] right-10`}
+              onClick={() =>
+                setIsConfirmPasswordVisible(!isConfirmPasswordVisible)
+              }
+            ></i>
           </div>
 
           {/* Submit button */}
           <div className="relative flex flex-col justify-between items-start">
             <button
-              onClick={handleLogin}
+              onClick={handleSubmit}
               className="m-auto bg-white font-semibold px-10 py-2 rounded-none text-black w-48 my-2 hover:bg-slate-100"
             >
               Submit

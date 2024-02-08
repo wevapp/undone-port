@@ -84,7 +84,7 @@ const Skills = () => {
       <div className="grid gap-y-4 p-8 text-white xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
         {cards.software.map((card) => (
           <div className="card glass m-auto hover:bg-slate-100 hover:text-black transition duration-500 ease-in-out cursor-not-allowed xs:w-full sm:w-52 md:w-52 lg:w-52 xl:w-52">
-            <figure className="p-2 hover:bg-black transition duration-500 ease-in-out">
+            <figure className="p-2 hover:bg-black transition duration-500 ease-in-out ">
               <img
                 src={card.img}
                 alt={card.title}

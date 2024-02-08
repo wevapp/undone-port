@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const Login = () => {
+  const [isClick, setIsClick] = useState(true); // State to control visibility
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -34,10 +36,10 @@ const Login = () => {
               }}
             />
           </div>
-          <div className="flex flex-col justify-between items-start px-8 py-1">
+          <div className="flex flex-col justify-between items-start px-8 py-1 relative">
             <label className="text-white">Password</label>
             <input
-              type="password"
+              type={isClick ? "password" : "text"} // Toggle password visibility
               value={user.password}
               placeholder="******"
               onChange={(e) => setUser({ ...user, password: e.target.value })}
@@ -49,11 +51,17 @@ const Login = () => {
                 borderImageSlice: "1",
               }}
             />
+            <i
+              className={`fa-light ${
+                isClick ? "fa-eye-slash" : "fa-eye"
+              } absolute top-[55%] right-10`}
+              onClick={() => setIsClick(!isClick)}
+            ></i>
           </div>
           <div className="relative flex flex-col justify-between items-start">
             <button
               onClick={handleLogin}
-              className="m-auto bg-white font-semibold px-10 py-2 rounded-none text-black w-48 my-2 hover:bg-slate-100"
+              className="m-auto bg-white font-semibold px-10 py-2 rounded-none text-black w-48 my-2"
             >
               Login
             </button>
@@ -62,7 +70,7 @@ const Login = () => {
 
         {/* SGV design */}
         <div
-          className="bg-yellow-300 xs:min-w-full sm:min-w-full md:min-w-full lg:min-w-[55%] xl:min-w-[55%] xs:h-[150px] sm:h-[250px] md:h-[300px] lg:h-[300px] relative"
+          className="xs:min-w-full sm:min-w-full md:min-w-full lg:min-w-[55%] xl:min-w-[55%] xs:h-[150px] sm:h-[250px] md:h-[300px] lg:h-[300px] relative"
           style={{
             backgroundImage: "url(/Logreg/log.jpg)",
           }}
