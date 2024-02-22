@@ -1,9 +1,11 @@
 import { create } from 'zustand'
 
+import homeImage from "../images/Home/me.png"
+
 const useImageStore = create((set) => ({
   portImages: [
     {
-      img: "src/images/Home/me.png",
+      img: homeImage,
       name: "home",
     },{
       img: "src/images/Logo/mrwhite.png",
