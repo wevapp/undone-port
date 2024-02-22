@@ -4,15 +4,15 @@ import { Link } from "react-router-dom"
 const Project = () => {
   const projects = [
     {
-      img: "/project/online.png",
+      img: "src/images/project/online.png",
       title: "Online Order",
       link: "https://wevapp.github.io/ordering/"
     },{
-      img: "/project/todo.png",
+      img: "src/images/project/todo.png",
       title: "Todo App",
       link: "https://wevapp.github.io/react-references/"
     },{
-      img: "/project/calc.png",
+      img: "src/images/project/calc.png",
       title: "Calculator",
       link: "https://wevapp.github.io/calculator/"
     },

@@ -50,7 +50,7 @@ const Home = () => {
         </aside>
         <div className="flex justify-center items-center  xs:mt-0 sm:mx-2 sm:mt-36 md:mt-44 lg:mt-56 xl:mt-72">
           <img
-            src="/Home/me.png"
+            src="src/images/Home/me.png"
             // width={280}
             alt="Me"
             className="mt-5 xs:w-[160px] sm:w-[300px] md:w-[280px] lg:w-[310px] xl:w-[340px]"

@@ -4,53 +4,53 @@ const Skills = () => {
   const cards = {
     software: [
       {
-        img: "/Icons/html1.PNG",
+        img: "src/images/Icons/html1.PNG",
         title: "HTML",
       },
       {
-        img: "/Icons/css.PNG",
+        img: "src/images/Icons/css.PNG",
         title: "CSS",
       },
       {
-        img: "/Icons/js.png",
+        img: "src/images/Icons/js.png",
         title: "Javascript",
       },
       {
-        img: "/Icons/react.png",
+        img: "src/images/Icons/react.png",
         title: "ReactJS",
       },
       {
-        img: "/Icons/tailwind.PNG",
+        img: "src/images/Icons/tailwind.PNG",
         title: "Tailwind-CSS",
       },
       {
-        img: "/Icons/express.png",
+        img: "src/images/Icons/express.png",
         title: "ExpressJS",
       },
       {
-        img: "/Icons/nodejs.png",
+        img: "src/images/Icons/nodejs.png",
         title: "NodeJS",
       },
       {
-        img: "/Icons/mongo.PNG",
+        img: "src/images/Icons/mongo.PNG",
         title: "MongoDB",
       },
     ],
     hardware: [
       {
-        img: "/Icons/pc.png",
+        img: "src/images/Icons/pc.png",
         title: "Upgrade Laptop",
       },
       {
-        img: "/Icons/laptop.png",
+        img: "src/images/Icons/laptop.png",
         title: "Upgrade PC",
       },
       {
-        img: "/Icons/trouble.png",
+        img: "src/images/Icons/trouble.png",
         title: "Troubleshooting",
       },
       {
-        img: "/Icons/install.jpg",
+        img: "src/images/Icons/install.jpg",
         title: "Installing Application",
       },
     ],

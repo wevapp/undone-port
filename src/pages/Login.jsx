@@ -72,7 +72,7 @@ const Login = () => {
         <div
           className="xs:min-w-full sm:min-w-full md:min-w-full lg:min-w-[55%] xl:min-w-[55%] xs:h-[150px] sm:h-[250px] md:h-[300px] lg:h-[300px] relative"
           style={{
-            backgroundImage: "url(/Logreg/log.jpg)",
+            backgroundImage: "url(src/images/Logreg/log.jpg)",
           }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

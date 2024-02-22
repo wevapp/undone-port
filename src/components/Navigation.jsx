@@ -45,7 +45,7 @@ const Navigation = () => {
         {/* Logo */}
         <Link to="/">
           <img
-            src="/Logo/mrwhite.png"
+            src="src/images/Logo/mrwhite.png"
             width={300}
             alt="logo"
             className="xs:w-44 sm:w-80 md:w-80 lg:w-80 xl:w-80"
