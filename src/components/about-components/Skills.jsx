@@ -17,12 +17,12 @@ const Skills = () => {
             <figure className="relative p-2 hover:bg-white transition duration-500 ease-in-out">
               <img
                 src={hardware.img}
-                alt={hardware.title}
+                alt={hardware.name}
                 className="w-full h-[200px] rounded-lg xs:object-contain sm:object-fill md:object-fill lg:object-fill xl:object-fill"
               />
             </figure>
             <div className="p-3">
-              <h2>{hardware.title}</h2>
+              <h2>{hardware.name}</h2>
             </div>
             {/* Pseudo-elements for the background transition */}
             <div className="absolute top-0 left-0 w-0 h-full bg-white transition duration-500 ease-in-out opacity-0 group-hover:opacity-100"></div>
