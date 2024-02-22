@@ -5,7 +5,7 @@ const Home = () => {
   const handleDownload = () => {
     // Replace 'resume.pdf' with the actual URL of your resume file
     const resumeUrl =
-      "https://drive.usercontent.google.com/download?id=1-bsJ9gbNhsvm4kLA6-h5aE7iV1rg4K7W&export=download&authuser=0&confirm=t&uuid=ed7f7690-33cc-47d2-bd70-109e8c5ffed5&at=APZUnTVh9Q4eTBFOL8pPnrAaSMvb:1707371275056";
+      "https://drive.usercontent.google.com/download?id=1VyV5-Kp8Z9B3A9l4fAo8XZXCOs1rdpmJ&export=download&authuser=0&confirm=t&uuid=eaa2e04f-6e37-4b1d-88b5-bd9331c48237&at=APZUnTU2rxoFFQg2g0nYXH_045kb:1708584772011";
 
     // Create an anchor element
     const anchor = document.createElement("a");
