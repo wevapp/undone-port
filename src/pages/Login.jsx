@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import useImageStore from "../store/useStore";
 
 const Login = () => {
-  const [isClick, setIsClick] = useState(true); // State to control visibility
+  const [isClick, setIsClick] = useState(true)
 
+  const loginImg = useImageStore((state) => state.login.img)
+
+  // user object
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
+  // handle login
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(user);
@@ -72,7 +77,7 @@ const Login = () => {
         <div
           className="xs:min-w-full sm:min-w-full md:min-w-full lg:min-w-[55%] xl:min-w-[55%] xs:h-[150px] sm:h-[250px] md:h-[300px] lg:h-[300px] relative"
           style={{
-            backgroundImage: "url(src/images/Logreg/log.jpg)",
+            backgroundImage: `url(${loginImg})`,
           }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// import zustand
+import useImageStore from "../store/useStore";
+
 const Navigation = () => {
+
+  const logoImage = useImageStore((state) => state.portImages)
+  const findLogo = logoImage.find((logo) => logo.name === 'logo')
+
   return (
     <div
       className="sticky top-0 z-10"
@@ -45,7 +53,7 @@ const Navigation = () => {
         {/* Logo */}
         <Link to="/">
           <img
-            src="src/images/Logo/mrwhite.png"
+            src={findLogo.img}
             width={300}
             alt="logo"
             className="xs:w-44 sm:w-80 md:w-80 lg:w-80 xl:w-80"

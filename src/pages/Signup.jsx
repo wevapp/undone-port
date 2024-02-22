@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import useImageStore from "../store/useStore";
 
 const Signup = () => {
+
+  const signupImg = useImageStore((state) => state.signup.img)
+
+  // user object
   const [newUser, setNewUser] = useState({
     fullname: "",
     email: "",
@@ -12,6 +17,7 @@ const Signup = () => {
   const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
     useState(false);
 
+  // Handle Submit 
   const handleSubmit = (e) => {
     e.preventDefault();
     setNewUser({
@@ -30,7 +36,7 @@ const Signup = () => {
         <div
           className="bg-cover bg-center my-auto xs:min-w-full sm:min-w-full md:min-w-full lg:min-w-[55%] xl:min-w-[55%] xs:h-[150px] sm:h-[250px] md:h-[300px] lg:h-[300px] relative"
           style={{
-            backgroundImage: "url(src/images/Logreg/reg.jpg)",
+            backgroundImage: `url(${signupImg})`,
             backgroundColor: "rgba(0, 0, 0, 0.5)",
           }}
         >

@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useImageStore from "../store/useStore";
 
 const Contact = () => {
+
+  const {fbImg, gmailImg} = useImageStore((state) => state)
+
+  // message object
   const [userMessage, setUserMessage] = useState({
     fullname: "",
     email: "",
     message: "",
   });
 
+  // handle send message
   const handleSendMessage = (e) => {
     e.preventDefault();
     alert("Send message successfully!");
@@ -29,14 +35,14 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/Icons/fb.png" alt="fb" className="w-[40px]" />
+              <img src={fbImg.img} alt="fb" className="w-[40px]" />
             </a>
             <a
               href="https://www.gmail.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/Icons/gmail.png" alt="fb" className="w-[40px]" />
+              <img src={gmailImg.img} alt="fb" className="w-[40px]" />
             </a>
           </div>
           <div className="border flex flex-col justify-between items-start px-8 py-1">
