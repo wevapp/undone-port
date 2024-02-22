@@ -1,22 +1,27 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+import useImageStore from "../store/useStore";
 
 const Home = () => {
   const handleDownload = () => {
-    // Replace 'resume.pdf' with the actual URL of your resume file
+    // actual URL resume file
     const resumeUrl =
       "https://drive.usercontent.google.com/download?id=1VyV5-Kp8Z9B3A9l4fAo8XZXCOs1rdpmJ&export=download&authuser=0&confirm=t&uuid=eaa2e04f-6e37-4b1d-88b5-bd9331c48237&at=APZUnTU2rxoFFQg2g0nYXH_045kb:1708584772011";
 
-    // Create an anchor element
     const anchor = document.createElement("a");
     anchor.href = resumeUrl;
     anchor.download = "Resume.docx"; // Specify the desired file name
 
-    // Programmatically click the anchor to trigger the download
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-  };
+    document.body.appendChild(anchor)
+    anchor.click()
+    document.body.removeChild(anchor)
+  }
+
+  // Call zustand store
+  const homeImage = useImageStore((state) => state.portImages)
+
+  // find home image
+  const findHomeImage = homeImage.find((image) => image.name === 'home')
 
   return (
     <div className="text-white sm:overflow-visible md:overflow-visible lg:overflow-visible xl:overflow-visible ">
@@ -50,7 +55,7 @@ const Home = () => {
         </aside>
         <div className="flex justify-center items-center  xs:mt-0 sm:mx-2 sm:mt-36 md:mt-44 lg:mt-56 xl:mt-72">
           <img
-            src="src/images/Home/me.png"
+            src={findHomeImage.img}
             // width={280}
             alt="Me"
             className="mt-5 xs:w-[160px] sm:w-[300px] md:w-[280px] lg:w-[310px] xl:w-[340px]"
