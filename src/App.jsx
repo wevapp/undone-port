@@ -23,6 +23,7 @@ const App = () => {
     <Routes>
       <Route element={<Rootlayout />}>
         <Route index element={<Home />} />
+        <Route path="/undone-port" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/educational" element={<EducationalBackground />} />
