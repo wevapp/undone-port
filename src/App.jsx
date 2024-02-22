@@ -37,14 +37,30 @@ const App = () => {
       <Route element={<Rootlayout />}>
         <Route index element={<Home />} />
         <Route path="/undone-port" element={<Home />} />
-        <Route path="/about" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazyAboutMe /></Suspense>} />
-        <Route path="/skills" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazySkills /></Suspense>} />
-        <Route path="/educational" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazyEducBack /></Suspense>} />
-        <Route path="/workingexp" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazyWorkExp /></Suspense>} />
-        <Route path="/contact" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazyContact /></Suspense>} />
-        <Route path="/projects" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazyProject /></Suspense>} />
-        <Route path="/login" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazyLogin /></Suspense>} />
-        <Route path="/register" element={<Suspense fallback={<span className="loading loading-bars loading-lg"></span>}><LazySignup /></Suspense>} />
+        <Route path="/about" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazyAboutMe /></Suspense>} />
+        <Route path="/skills" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazySkills /></Suspense>} />
+        <Route path="/educational" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazyEducBack /></Suspense>} />
+        <Route path="/workingexp" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazyWorkExp /></Suspense>} />
+        <Route path="/contact" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazyContact /></Suspense>} />
+        <Route path="/projects" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazyProject /></Suspense>} />
+        <Route path="/login" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazyLogin /></Suspense>} />
+        <Route path="/register" element={<Suspense fallback={<div className="text-center">
+      <span className="border-2 loading loading-bars loading-lg"></span>
+      </div>}><LazySignup /></Suspense>} />
 
         {/* <Route path="/test" element={<Test />} /> */}
       </Route>
