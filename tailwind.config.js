@@ -1,16 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      xs: '320px', // Adjust the size as needed
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      // xs: '320px',
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
   },
   plugins: [require("daisyui")],
@@ -30,7 +27,7 @@ export default {
       "garden",
       "forest", // eto
       "aqua",
-      "lofi",  // eto
+      "lofi", // eto
       "pastel",
       "fantasy", // eto
       "wireframe", // eto
@@ -50,5 +47,4 @@ export default {
       "sunset", // eto
     ],
   },
-}
-
+};
